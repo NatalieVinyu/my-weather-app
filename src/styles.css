@@ -1,0 +1,108 @@
+.search {
+    border: 1px solid #cccccc79;
+    background-color: #cccccc42;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    margin: 30px 0px 30px 30px ;
+
+}
+
+button {
+    border: 1px solid #cccccc79;
+    background-color: #cccccc42;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    transition: 150ms ease-in;
+    margin: 30px 0px 30px 30px ;
+    cursor: pointer;
+    margin: 30px 0px 0px 5px;
+}
+
+button:hover {
+    border: 1px solid #cccccc42;
+    background-color: #cccccc79;
+}
+
+.main {
+    border: 1px solid;
+    width: 800px;
+    margin: 50px;
+}
+
+h1 {
+    margin: 0px ;
+    font-size: 30px;
+    font-family: monospace;
+
+}
+
+h2 {
+    margin: 0px ;
+    font-family: monospace;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 90px;
+    margin: 10px 0px 0px 0px;
+}
+
+h5,h6 {
+    margin: 0px;
+    font-size: 15px;
+    font-family: monospace;
+
+}
+
+.days {
+    font-size: 20px;
+}
+
+.container1 {
+    margin: 5px 0px 0px 30px;
+    flex-direction: row;
+    display: flex;
+}
+
+.header {
+    flex-direction: row;
+    display: flex;
+}
+
+p.current {
+    font-size: 150px;
+    margin: 0px 0px 0px 175px;
+    align-content: center;
+}
+
+.container2 {
+    display: flex;
+    margin: 15px 0px 0px 20px;
+}
+
+
+.card {
+    text-align: center;
+    width: 120px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.emojis {
+    font-size: 55px;
+    margin: 25px 20px;
+}
+
+.footer {
+    text-align: center;
+    font-family: monospace;
+    margin: 20px;
+}
+
+
+
+
