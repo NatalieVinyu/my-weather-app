@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link class="styles" rel="stylesheet" href="src/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="main">
+
+  <section class="header">
+    <form id="text-input">
+      <input class="search" type="text" id="search-city"" placeholder="Search" autocomplete="off" autofocus="on" >
+    </form>
+      <div class="search-bar">
+        <button> <i class="fa-solid fa-location-dot"></i></button>
+      </div>
+    
+  </section>
+  
+  <section class="container1">
+    <div class="city-temp">
+      <h1>Johannesburg</h1>
+      
+      <div class="details">
+        <h2>
+          Day , Date , Time
+        </h2>
+        
+      </div>
+        <h3>
+          <div class="current-temp" id="current-temp">
+            25º
+          </div>
+        </h3> 
+        <h5>sky</h5>
+        <h6>Wind km/h</h6>
+      </div>
+      <p class="current">☀️</p>
+    </section>
+
+    <section class="container2">
+        <div class="card" >
+            <div class="card-body">
+              <h4 class="days">Thurs</h4>
+              <p class="emojis">☀️</p>
+              <p class="temp"><strong>15</strong>  24</p>
+            </div>
+          </div>
+          <div class="card" >
+            <div class="card-body">
+              <h4 class="days">Fri</h4>
+              <p class="emojis">⛅️</p>
+              <p class="temp"><strong>13</strong>  23</p>
+            </div>
+          </div>   
+           <div class="card" >
+            <div class="card-body">
+              <h4 class="days">Sat</h4>
+              <p class="emojis">🌥</p>
+              <p class="temp"><strong>12</strong>  24</p>
+            </div>
+          </div>   
+           <div class="card" >
+            <div class="card-body">
+              <h4 class="days">Sun</h4>
+              <p class="emojis">⛈</p>
+              <p class="temp"><strong>9</strong>  24</p>
+            </div>
+          </div>    
+          <div class="card" >
+            <div class="card-body">
+              <h4 class="days">Mon</h4>
+              <p class="emojis">🌧</p>
+              <p class="temp"><strong>9</strong> 22</p>
+            </div>
+          </div>
+    </section>
+   
+    <p class="footer">This page was built by Natalie Vinyu</p>
+
+  </div>  
+
+  <script src="src/script.js"></script>
+</body>
+</html>
