@@ -1,39 +1,3 @@
-/*let weather = {
-    paris: {
-      temp: 19.7,
-      humidity: 80
-    },
-    tokyo: {
-      temp: 17.3,
-      humidity: 50
-    },
-    lisbon: {
-      temp: 30.2,
-      humidity: 20
-    },
-    "san francisco": {
-      temp: 20.9,
-      humidity: 100
-    },
-    oslo: {
-      temp: -5,
-      humidity: 20
-    }
-  };
-  
-
-let askCity = prompt("Enter a city?");
-if (weather[askCity] !== undefined) {
-  let tempCelsius = weather[askCity].temp;
-  let tempFahrenheit = Math.round(tempCelsius * 1.8 + 32);
-  let humidity = weather[askCity].humidity;
-  alert("It is currently " + tempCelsius + "°C " + "(" + tempFahrenheit + " °F) in " + askCity + " with a humidity of " + humidity + "%");
-} else {
-  alert("Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+" + askCity);
-}
-
-*/
-
 let now = new Date();
 let h2 = document.querySelector("h2");
 
@@ -83,7 +47,8 @@ function retrievePosition(position) {
   axios.get(apiUrl).then(currentPosition)
 }
 
-function getCurrentPosition() {
+function getCurrentPosition(event) {
+  event.preventDefault()
   navigator.geolocation.getCurrentPosition(retrievePosition)
 }
 
@@ -91,17 +56,21 @@ let button = document.querySelector("button")
 button.addEventListener ("click", getCurrentPosition)
 
 
-function inputWeather(response) {
-  document.querySelector("h1").innerHTML = response.data.name
-  document.querySelector("h2").innerHTML = response.data.main.temperature
+function submitButton(event) {
+  event.preventDefault()
+  let city = document.querySelector("#search-city")
+
+  let h1 = document.querySelector("h1")
+  h1.innerHTML = `${city.value}`
+  
+  let apiKey = "77cb0df8b340d241d54524527e9a1295";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`
+  
+  axios.get(apiUrl).then(currentPosition)
 }
 
-function searchCity(city) {
-  let apiKey = "77cb0df8b340d241d54524527e9a1295"
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-
-  axios.get(apiUrl).then(inputWeather)
-}
+let searchForm = document.querySelector("#text-input")
+searchForm.addEventListener("submit", submitButton)
 
 
 
